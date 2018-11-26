@@ -5,8 +5,8 @@
 using namespace std;
 
 
-#ifndef PROJECT2_MYLIBRARY_RY_H
-#define PROJECT2_MYLIBRARY_RY_H
+#ifndef UNTITLED_MYLIBRARY_RY_H
+#define UNTITLED_MYLIBRARY_RY_H
 
 #endif //PROJECT2_MYLIBRARY_RY_H
 
@@ -101,3 +101,4 @@ LinkNode::~LinkNode() {}
 LinkNode::LinkNode() {}
 
 
+class

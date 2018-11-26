@@ -1158,24 +1158,35 @@ void sort(City *l) {
 //int main(){
 //    City * head, * p, * rear;
 //    head = rear = new City;
+//
+//    //创建链表
 //    while (true) {
 //        p = new City;
 //        cin >> p->cityName;
+//
+//        // 判断是否结束输入
 //        if (p->cityName == "@"){
 //            delete p;
 //            break;
 //        }
+//
 //        cin >> p->population;
 //        rear->next = p;
 //        rear = p;
 //    }
 //    rear->next = NULL;
+//
+//    // 对链表排序
 //    sort(head);
+//
+//    // 删除最后一个节点
 //    City *pp = head->next;
 //    while (pp->next->next != NULL){
 //        pp = pp->next;
 //    }
 //    pp = NULL;
+//
+//    // 输出链表
 //    head = head->next;
 //    do {
 //        cout << head->cityName << head->population << " ";
@@ -1184,24 +1195,35 @@ void sort(City *l) {
 //}
 
 
+// 对输入的一个字符串进行加密和解密
 #include <iostream>
 #include <cstring>
 using namespace std;
 
 int main(){
+    // 定义加密数组
     int encrypyNum[] = {8, 7, 3, 4, 9, 6, 2};
     string inputStr, inputStr1;
+
     getline(cin, inputStr);
+
     inputStr1 = inputStr;
+
     for (int i = 0, j = 0; i < inputStr.size(); i++, j++){
+        // 加密字符
         inputStr[i] = char(inputStr[i] + encrypyNum[j]);
+
+        // 解密字符
         inputStr1[i] = char(inputStr1[i] - encrypyNum[j]);
+
+        // 判断是否超出范围
         if (inputStr[i] > 122)
             inputStr[i] = char(inputStr[i]%91);
         if (inputStr1[i] < 32)
             inputStr1[i] = char(inputStr1[i]+91);
-        if (j == 6)
-            j = -1;
+
+        // 循环加密
+        if (j == 6) j = -1;
     }
     cout << inputStr << endl << inputStr1;
     return 0;
