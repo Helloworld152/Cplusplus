@@ -1195,36 +1195,64 @@ void sort(City *l) {
 //}
 
 
-// 对输入的一个字符串进行加密和解密
+//// 对输入的一个字符串进行加密和解密
+//#include <iostream>
+//#include <cstring>
+//using namespace std;
+//
+//int main(){
+//    // 定义加密数组
+//    int encrypyNum[] = {8, 7, 3, 4, 9, 6, 2};
+//    string inputStr, inputStr1;
+//
+//    getline(cin, inputStr);
+//
+//    inputStr1 = inputStr;
+//
+//    for (int i = 0, j = 0; i < inputStr.size(); i++, j++){
+//        // 加密字符
+//        inputStr[i] = char(inputStr[i] + encrypyNum[j]);
+//
+//        // 解密字符
+//        inputStr1[i] = char(inputStr1[i] - encrypyNum[j]);
+//
+//        // 判断是否超出范围
+//        if (inputStr[i] > 122)
+//            inputStr[i] = char(inputStr[i]%91);
+//        if (inputStr1[i] < 32)
+//            inputStr1[i] = char(inputStr1[i]+91);
+//
+//        // 循环加密
+//        if (j == 6) j = -1;
+//    }
+//    cout << inputStr << endl << inputStr1;
+//    return 0;
+//}
+
+
 #include <iostream>
-#include <cstring>
+#include <iomanip>
+
 using namespace std;
 
+class Myclass{
+public:
+    Myclass(){cout << 'A';}
+    Myclass(char c){cout << c;}
+    ~Myclass(){cout << 'B';}
+};
+
+class point{
+private:
+    int x;
+    int y;
+public:
+    point(int x, int y):x(x),y(y){}
+};
+
 int main(){
-    // 定义加密数组
-    int encrypyNum[] = {8, 7, 3, 4, 9, 6, 2};
-    string inputStr, inputStr1;
-
-    getline(cin, inputStr);
-
-    inputStr1 = inputStr;
-
-    for (int i = 0, j = 0; i < inputStr.size(); i++, j++){
-        // 加密字符
-        inputStr[i] = char(inputStr[i] + encrypyNum[j]);
-
-        // 解密字符
-        inputStr1[i] = char(inputStr1[i] - encrypyNum[j]);
-
-        // 判断是否超出范围
-        if (inputStr[i] > 122)
-            inputStr[i] = char(inputStr[i]%91);
-        if (inputStr1[i] < 32)
-            inputStr1[i] = char(inputStr1[i]+91);
-
-        // 循环加密
-        if (j == 6) j = -1;
-    }
-    cout << inputStr << endl << inputStr1;
+    Myclass p1, *p2;
+    p2 = new Myclass('X');
+    delete p2;
     return 0;
 }
