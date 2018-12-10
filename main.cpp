@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include "Myclass.h"
 using namespace std;
 //#include <iostream>
 //using namespace std;
@@ -1201,58 +1202,79 @@ void sort(City *l) {
 //using namespace std;
 //
 //int main(){
-//    // 定义加密数组
-//    int encrypyNum[] = {8, 7, 3, 4, 9, 6, 2};
-//    string inputStr, inputStr1;
+//    Myclass p1, *p2;
+//    p2 = new Myclass('X');
+//    delete p2;
+//    return 0;
+//}
+
+///* 构造函数和析构函数*/
+//#include <iostream>
+//#include <iomanip>
 //
-//    getline(cin, inputStr);
+//using namespace std;
 //
-//    inputStr1 = inputStr;
+//class Myclass{
+//public:
+//    Myclass(){cout << 'A';}
+//    Myclass(char c){cout << c;}
+//    ~Myclass(){cout << 'B';}
+//};
 //
-//    for (int i = 0, j = 0; i < inputStr.size(); i++, j++){
-//        // 加密字符
-//        inputStr[i] = char(inputStr[i] + encrypyNum[j]);
+//class point{
+//private:
+//    int x;
+//    int y;
+//public:
+//    point(int x, int y):x(x),y(y){}
+//};
 //
-//        // 解密字符
-//        inputStr1[i] = char(inputStr1[i] - encrypyNum[j]);
-//
-//        // 判断是否超出范围
-//        if (inputStr[i] > 122)
-//            inputStr[i] = char(inputStr[i]%91);
-//        if (inputStr1[i] < 32)
-//            inputStr1[i] = char(inputStr1[i]+91);
-//
-//        // 循环加密
-//        if (j == 6) j = -1;
-//    }
-//    cout << inputStr << endl << inputStr1;
+//int main(){
+//    Myclass p1, *p2;
+//    p2 = new Myclass('X');
+//    delete p2;
 //    return 0;
 //}
 
 
-#include <iostream>
-#include <iomanip>
-
-using namespace std;
-
-class Myclass{
-public:
-    Myclass(){cout << 'A';}
-    Myclass(char c){cout << c;}
-    ~Myclass(){cout << 'B';}
-};
-
-class point{
-private:
-    int x;
-    int y;
-public:
-    point(int x, int y):x(x),y(y){}
-};
+///*usestock.cpp stock类的使用*/
+//int main() {
+//    Stock stock1;
+//    stock1.acquire("Apple", 20, 12.5);
+//    stock1.show();
+//    stock1.buy(15, 18.125);
+//    stock1.show();
+//    stock1.sell(400, 20.00);
+//    stock1.show();
+//    stock1.buy(300000, 40.125);
+//    stock1.show();
+//    stock1.sell(300000, 40.125);
+//    stock1.show();
+//    return 0;
+//}
 
 int main(){
-    Myclass p1, *p2;
-    p2 = new Myclass('X');
-    delete p2;
-    return 0;
+    SavingAccount a1(2000),a2(1000);
+    a2.setRate(0.09);
+    a1.computeAmount();
+    a1.showAmount();
+    a2.showAmount();
+    a2.showDate();
+    a2.computeAmount();
+    a2.showAmount();
+    a2.computeAmount();
+    a2.showAmount();
+    a1.setRate(0.05);
+    a1.computeAmount();
+    a1.showAmount();
+    LongLongInt l1("1234567890");
+    LongLongInt l2("1");
+    l2 = l1;
+    l1.display();
+    l2.display();
+    cout << l2[9] << endl;
+    l2[9] = 5;
+    l2 = l1(4, 9);
+    l2.display();
+    (l1+l2).display();
 }
