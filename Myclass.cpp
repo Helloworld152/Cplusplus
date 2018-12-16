@@ -145,6 +145,13 @@ LongLongInt LongLongInt::operator()(int start, int end) {
     return longLongInt;
 }
 
+ostream& operator<<(ostream &ostream1, const LongLongInt & longLongInt){
+    for (int i = longLongInt.length - 1; i >= 0; i--)
+        ostream1 << longLongInt.integer[i];
+    return ostream1;
+}
+
+
 
 //Date class function
 
@@ -178,4 +185,18 @@ SavingAccount::SavingAccount(double Amount) {
 void SavingAccount::computeAmount() {
     amount = amount * (1 + rate);
     months = months + 1;
+}
+
+ostream&operator<<(ostream &ostream1, const Commodity& commodity){
+    ostream1 << commodity.name << " " << commodity.costPrice << " " << commodity.sellPrice << " " << commodity.number << endl;
+    return ostream1;
+}
+
+Commodity Commodity::operator+(const Commodity &commodity) {
+    Commodity commodity1;
+    commodity1.name = "inAll";
+    commodity1.number = number + commodity.number;
+    commodity1.sellPrice = sellPrice + commodity.sellPrice;
+    commodity1.costPrice = costPrice + commodity.costPrice;
+    return commodity1;
 }

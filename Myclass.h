@@ -58,6 +58,8 @@ public:
     LongLongInt operator=(const LongLongInt &longLongInt);
     int & operator[](int index);
     LongLongInt operator()(int start, int end);
+    friend ostream& operator<<(ostream &ostream1, const LongLongInt& longLongInt);
+    friend istream& operator>>(istream &istream1, LongLongInt longLongInt);
 };
 
 //Date class
@@ -90,6 +92,22 @@ private:
     static int accountNum;
     int months;
 };
+
+class Commodity{
+private:
+    string name;
+    double costPrice;
+    double sellPrice;
+    int number;
+public:
+    Commodity();
+    Commodity(string Name, double cost, double sell, int num):name(Name),costPrice(cost*num),sellPrice(sell*num),number(num){}
+    friend ostream&operator<<(ostream &ostream1, const Commodity& commodity);
+    Commodity operator+(const Commodity& commodity);
+    friend void avg(const Commodity & g1);
+};
+
+
 
 #endif //UNTITLED_STOCK00_H
 

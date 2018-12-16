@@ -1253,28 +1253,31 @@ void sort(City *l) {
 //    return 0;
 //}
 
-int main(){
-    SavingAccount a1(2000),a2(1000);
-    a2.setRate(0.09);
-    a1.computeAmount();
-    a1.showAmount();
-    a2.showAmount();
-    a2.showDate();
-    a2.computeAmount();
-    a2.showAmount();
-    a2.computeAmount();
-    a2.showAmount();
-    a1.setRate(0.05);
-    a1.computeAmount();
-    a1.showAmount();
-    LongLongInt l1("1234567890");
-    LongLongInt l2("1");
-    l2 = l1;
-    l1.display();
-    l2.display();
-    cout << l2[9] << endl;
-    l2[9] = 5;
-    l2 = l1(4, 9);
-    l2.display();
-    (l1+l2).display();
-}
+//int main(){
+//    SavingAccount a1(2000),a2(1000);
+//    a2.setRate(0.09);
+//    a1.computeAmount();
+//    a1.showAmount();
+//    a2.showAmount();
+//    a2.showDate();
+//    a2.computeAmount();
+//    a2.showAmount();
+//    a2.computeAmount();
+//    a2.showAmount();
+//    a1.setRate(0.05);
+//    a1.computeAmount();
+//    a1.showAmount();
+//    LongLongInt l1("1234567890");
+//    LongLongInt l2("1");
+//    l2 = l1;
+//    l1.display();
+//    l2.display();
+//    cout << l2[9] << endl;
+//    l2[9] = 5;
+//    l2 = l1(4, 9);
+//    l2.display();
+//    (l1+l2).display();
+//    cout << l1;
+//}
+
+
