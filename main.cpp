@@ -1253,7 +1253,7 @@ void sort(City *l) {
 //    return 0;
 //}
 
-//int main(){
+int main(){
 //    SavingAccount a1(2000),a2(1000);
 //    a2.setRate(0.09);
 //    a1.computeAmount();
@@ -1278,6 +1278,8 @@ void sort(City *l) {
 //    l2.display();
 //    (l1+l2).display();
 //    cout << l1;
-//}
+    String string1("sbjbjdbcjd");
+    String string2 = string1;
+}
 
 

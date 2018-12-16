@@ -152,6 +152,56 @@ ostream& operator<<(ostream &ostream1, const LongLongInt & longLongInt){
 }
 
 
+//String class function
+
+String::String(const char *s) {
+    if (s != NULL) {
+        p = new char[strlen(s) + 1];
+        strcpy(p, s);
+    }
+    cout << p << endl;
+}
+
+String::String(const String &string1) {
+    p = new char[strlen(string1.p) + 1];
+    strcpy(p, string1.p);
+    cout << p;
+}
+
+String String::operator=(const String &string1) {
+    if (this == &string1)
+        return *this;
+    else {
+        delete p;
+        p = new char[strlen(string1.p) + 1];
+        strcpy(p, string1.p);
+        return *this;
+    }
+}
+
+bool String::operator!=(const String &string1) {
+
+}
+
+String String::operator+(const String &string1) {
+    String string2;
+    int len = strlen(p) + strlen(string1.p) + 1;
+    string2.p = new char[len];
+    for (int i = 0; i < len - 1; i++){
+        if (i < strlen(p)){
+            string2.p[i] = p[i];
+        }
+        else if (i >= strlen(p)){
+            string2.p[i] = string1.p[i - strlen(p)];
+        }
+    }
+    return string2;
+}
+
+ostream&operator<<(ostream &ostream1, const String&string1) {
+
+    return ostream1;
+}
 
 //Date class function
 

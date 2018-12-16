@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <string.h>
 using namespace std;
 
 // Stock class
@@ -100,14 +101,36 @@ private:
     double sellPrice;
     int number;
 public:
-    Commodity();
+    Commodity(){};
     Commodity(string Name, double cost, double sell, int num):name(Name),costPrice(cost*num),sellPrice(sell*num),number(num){}
     friend ostream&operator<<(ostream &ostream1, const Commodity& commodity);
     Commodity operator+(const Commodity& commodity);
     friend void avg(const Commodity & g1);
 };
 
+// String class
+class String{
+private:
+    char *p;
+public:
+    String(){ p = NULL; };
+    String(const char *s);
+    String(const String & string1);
+    ~String(){};
 
+    String operator+(const String & string1);
+    String operator=(const String & string1);
+    String operator+=(const String & string1);
+    bool operator>(const String & string1);
+    bool operator>=(const String & string1);
+    bool operator<(const String & string1);
+    bool operator<=(const String & string1);
+    bool operator==(const String & string1);
+    bool operator!=(const String & string1);
+    friend ostream&operator<<(ostream &ostream1, String & string1);
+    friend istream&operator>>(istream &istream1, String & string1);
+
+};
 
 #endif //UNTITLED_STOCK00_H
 
