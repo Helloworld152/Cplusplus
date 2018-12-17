@@ -110,8 +110,6 @@ public:
 
 // String class
 class String{
-private:
-    char *p;
 public:
     String(){ p = NULL; };
     String(const char *s);
@@ -127,9 +125,11 @@ public:
     bool operator<=(const String & string1);
     bool operator==(const String & string1);
     bool operator!=(const String & string1);
-    friend ostream&operator<<(ostream &ostream1, String & string1);
+    friend ostream&operator<<(ostream &ostream1, const String & string1);
     friend istream&operator>>(istream &istream1, String & string1);
 
+private:
+    char *p;
 };
 
 #endif //UNTITLED_STOCK00_H

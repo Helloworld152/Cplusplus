@@ -1278,8 +1278,16 @@ int main(){
 //    l2.display();
 //    (l1+l2).display();
 //    cout << l1;
-    String string1("sbjbjdbcjd");
-    String string2 = string1;
+    String string1("main.cpp ");
+    String string2("hello");
+    String string3;
+    cin >> string3;
+    cout << string1 << endl;
+    cout << string2 << endl;
+    cout << string1+string2 << endl;
+    string1 += string2;
+    cout << string1 << endl;
+    cout << string3;
 }
 
 

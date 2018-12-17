@@ -152,13 +152,11 @@ String::String(const char *s) {
         p = new char[strlen(s) + 1];
         strcpy(p, s);
     }
-    cout << p << endl;
 }
 
 String::String(const String &string1) {
     p = new char[strlen(string1.p) + 1];
     strcpy(p, string1.p);
-    cout << p;
 }
 
 String String::operator=(const String &string1) {
@@ -172,8 +170,51 @@ String String::operator=(const String &string1) {
     }
 }
 
-bool String::operator!=(const String &string1) {
+String String::operator+=(const String &string1) {
+    *this = *this + string1;
+    return *this;
+}
 
+bool String::operator!=(const String &string1) {
+    if (strcmp(p, string1.p) != 0)
+        return true;
+    else
+        return false;
+}
+
+bool String::operator==(const String &string1) {
+    if (strcmp(p, string1.p) == true)
+        return true;
+    else
+        return false;
+}
+
+bool String::operator>(const String &string1) {
+    if (strcmp(p, string1.p) > 0)
+        return true;
+    else
+        return false;
+}
+
+bool String::operator>=(const String &string1) {
+    if (strcmp(p, string1.p) >= 0)
+        return true;
+    else
+        return false;
+}
+
+bool String::operator<(const String &string1) {
+    if (strcmp(p, string1.p) < 0)
+        return true;
+    else
+        return false;
+}
+
+bool String::operator<=(const String &string1) {
+    if (strcmp(p, string1.p) <= 0)
+        return true;
+    else
+        return false;
 }
 
 String String::operator+(const String &string1) {
@@ -194,6 +235,12 @@ String String::operator+(const String &string1) {
 ostream&operator<<(ostream &ostream1, const String&string1) {
     ostream1 << string1.p;
     return ostream1;
+}
+
+istream& operator>>(istream &istream1, String &string1) {
+    string1.p = new char[1024];
+    istream1 >> string1.p;
+    return istream1;
 }
 
 //Date class function
