@@ -35,11 +35,11 @@ private:
     int num;
     int den;
 public:
-    Rational(int n = 0, int d = 1);
+    Rational(int n = 0, int d = 1){};
     void printRational(){
         cout << num << "/" << den;
     }
-    Rational operator+(const Rational &rational);
+    Rational operator+(const Rational &rational){ Rational rational1; return rational1;};
 
     Rational operator*(const Rational &rational);
 };
@@ -60,7 +60,7 @@ public:
     int & operator[](int index);
     LongLongInt operator()(int start, int end);
     friend ostream& operator<<(ostream &ostream1, const LongLongInt& longLongInt);
-    friend istream& operator>>(istream &istream1, LongLongInt longLongInt);
+    friend istream& operator>>(istream &istream1, LongLongInt &longLongInt){ return istream1;};
 };
 
 //Date class

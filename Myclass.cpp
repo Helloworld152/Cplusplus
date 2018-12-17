@@ -57,14 +57,7 @@ void Stock::show() {
 
 
 //Rational class function
-Rational::Rational(int n, int d) {
 
-    for (int i = 2; i <= min(n,d); i++){
-        if (n % i == 0 && d % i == 0){
-
-        }
-    }
-}
 
 Rational Rational::operator*(const Rational &rational) {
     Rational rational1;
@@ -185,7 +178,7 @@ bool String::operator!=(const String &string1) {
 
 String String::operator+(const String &string1) {
     String string2;
-    int len = strlen(p) + strlen(string1.p) + 1;
+    int len = static_cast<int>(strlen(p) + strlen(string1.p) + 1);
     string2.p = new char[len];
     for (int i = 0; i < len - 1; i++){
         if (i < strlen(p)){
@@ -199,7 +192,7 @@ String String::operator+(const String &string1) {
 }
 
 ostream&operator<<(ostream &ostream1, const String&string1) {
-
+    ostream1 << string1.p;
     return ostream1;
 }
 
@@ -238,7 +231,10 @@ void SavingAccount::computeAmount() {
 }
 
 ostream&operator<<(ostream &ostream1, const Commodity& commodity){
-    ostream1 << commodity.name << " " << commodity.costPrice << " " << commodity.sellPrice << " " << commodity.number << endl;
+    ostream1 << commodity.name << " "
+             << commodity.costPrice << " "
+             << commodity.sellPrice << " "
+             << commodity.number << endl;
     return ostream1;
 }
 
