@@ -133,4 +133,3 @@ private:
 };
 
 #endif //UNTITLED_STOCK00_H
-
