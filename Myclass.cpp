@@ -70,7 +70,7 @@ Rational Rational::operator*(const Rational &rational) {
 //LongLongInt class function
 
 LongLongInt::LongLongInt(char *a) {
-    length = strlen(a);
+    length = static_cast<int>(strlen(a));
     integer = new int[length];
     for (int i = 0; i < length; i++)
         integer[i] = a[length - 1 - i] - '0';
