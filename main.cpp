@@ -1291,17 +1291,31 @@ void sort(City *l) {
 //}
 
 
-class A{
-    int x;
-    int y;
-public:
-    A(int i = 0, int j = 0):x(i), y(j){}
-    ~A(){
-        cout << "Point:" << x << y << endl;
-    }
-};
+//class A{
+//    int x;
+//    int y;
+//public:
+//    A(int i = 0, int j = 0):x(i), y(j){}
+//    ~A(){
+//        cout << "Point:" << x << y << endl;
+//    }
+//};
+//
+//int main(){
+//    A a(3,4);
+//    return  0;
+//}
 
-int main(){
-    A a(3,4);
-    return  0;
+// 输入一个字符串str,在输入一个字符c,完成函数void delChar(char str[], char c),要求递归实现
+void delChar(char str[], char c){
+    while (*str && *str != c)
+        str++;
+    if (*str){
+        delChar(str + 1, c);
+        do {
+            *str = *(str + 1);
+            str++;
+        } while (*str);
+    }
+    else return;
 }
