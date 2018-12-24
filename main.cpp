@@ -1253,41 +1253,55 @@ void sort(City *l) {
 //    return 0;
 //}
 
+//int main(){
+////    SavingAccount a1(2000),a2(1000);
+////    a2.setRate(0.09);
+////    a1.computeAmount();
+////    a1.showAmount();
+////    a2.showAmount();
+////    a2.showDate();
+////    a2.computeAmount();
+////    a2.showAmount();
+////    a2.computeAmount();
+////    a2.showAmount();
+////    a1.setRate(0.05);
+////    a1.computeAmount();
+////    a1.showAmount();
+////    LongLongInt l1("1234567890");
+////    LongLongInt l2("1");
+////    l2 = l1;
+////    l1.display();
+////    l2.display();
+////    cout << l2[9] << endl;
+////    l2[9] = 5;
+////    l2 = l1(4, 9);
+////    l2.display();
+////    (l1+l2).display();
+////    cout << l1;
+//    String string1("main.cpp ");
+//    String string2("hello");
+//    String string3;
+//    cin >> string3;
+//    cout << string1 << endl;
+//    cout << string2 << endl;
+//    cout << string1+string2 << endl;
+//    string1 += string2;
+//    cout << string1 << endl;
+//    cout << string3;
+//}
+
+
+class A{
+    int x;
+    int y;
+public:
+    A(int i = 0, int j = 0):x(i), y(j){}
+    ~A(){
+        cout << "Point:" << x << y << endl;
+    }
+};
+
 int main(){
-//    SavingAccount a1(2000),a2(1000);
-//    a2.setRate(0.09);
-//    a1.computeAmount();
-//    a1.showAmount();
-//    a2.showAmount();
-//    a2.showDate();
-//    a2.computeAmount();
-//    a2.showAmount();
-//    a2.computeAmount();
-//    a2.showAmount();
-//    a1.setRate(0.05);
-//    a1.computeAmount();
-//    a1.showAmount();
-//    LongLongInt l1("1234567890");
-//    LongLongInt l2("1");
-//    l2 = l1;
-//    l1.display();
-//    l2.display();
-//    cout << l2[9] << endl;
-//    l2[9] = 5;
-//    l2 = l1(4, 9);
-//    l2.display();
-//    (l1+l2).display();
-//    cout << l1;
-    String string1("main.cpp ");
-    String string2("hello");
-    String string3;
-    cin >> string3;
-    cout << string1 << endl;
-    cout << string2 << endl;
-    cout << string1+string2 << endl;
-    string1 += string2;
-    cout << string1 << endl;
-    cout << string3;
+    A a(3,4);
+    return  0;
 }
-
-
