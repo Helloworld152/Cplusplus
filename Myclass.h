@@ -132,4 +132,14 @@ private:
     char *p;
 };
 
+
+class DivideByZeroException {
+public:
+    DivideByZeroException():message("attempted to divide by zero"){}
+    const char * what() const { return message; }
+
+private:
+    const char *message;
+};
+
 #endif //UNTITLED_STOCK00_H

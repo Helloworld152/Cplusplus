@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <cmath>
 #include "Myclass.h"
 using namespace std;
 //#include <iostream>
@@ -1306,16 +1307,79 @@ void sort(City *l) {
 //    return  0;
 //}
 
-// 输入一个字符串str,在输入一个字符c,完成函数void delChar(char str[], char c),要求递归实现
-void delChar(char str[], char c){
-    while (*str && *str != c)
-        str++;
-    if (*str){
-        delChar(str + 1, c);
-        do {
-            *str = *(str + 1);
-            str++;
-        } while (*str);
+//// 输入一个字符串str,在输入一个字符c,完成函数void delChar(char str[], char c),要求递归实现
+//void delChar(char str[], char c){
+//    while (*str && *str != c)
+//        str++;
+//    if (*str){
+//        delChar(str + 1, c);
+//        do {
+//            *str = *(str + 1);
+//            str++;
+//        } while (*str);
+//    }
+//    else return;
+//}
+//
+//int main(){
+//    char str[10], c;
+//    cin >> str >> c;
+//    delChar(str, c);
+//    cout << str;
+//    return 0;
+//}
+
+
+////异常处理
+//int main(){
+//    int number1, number2;
+//    double result;
+//
+//    cout << "Enter two integers: ";
+//    while (cin >> number1 >> number2){
+//        try {
+//            if (number2 == 0)
+//                throw DivideByZeroException();
+//            result = static_cast< double > (number1) / number2;
+//            cout << "The quotient is: " << result << endl;
+//        }
+//        catch (DivideByZeroException exception1) {
+//            cout << "Exception occurred: " << exception1.what() << endl;
+//        }
+//        cout << endl << "Enter two integers: ";
+//    }
+//    cout << endl;
+//}
+
+
+class noRoot{};
+class divByZero{};
+
+double Sqrt(double x){
+    if (x < 0)
+        throw noRoot();
+    return sqrt(x);
+}
+
+double div(double x, double y){
+    if (y == 0)
+        throw divByZero();
+    return x / y;
+}
+
+int main(){
+    double a, b, c, x1, x2, dlt;
+
+    cin >> a >> b >> c;
+
+    try {
+        dlt = Sqrt(b * b - 4 * a * c);
+        x1 = div(-b + dlt, 2 * a);
+        x2 = div(-b + dlt, 2 * a);
+        cout << "x1 = " << x1 << ", x2 = " << x2 << endl;
     }
-    else return;
+    catch (noRoot){ cout << "无根" << endl;}
+    catch (divByZero){ cout << "不是一元二次方程" << endl;}
+
+    return 0;
 }
