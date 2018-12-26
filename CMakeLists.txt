@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(untitled main.cpp Myclass.h stock00.cpp Myclass.cpp)
+add_executable(untitled main.cpp Myclass.h stock00.cpp Myclass.cpp Codes/hello.cpp)
