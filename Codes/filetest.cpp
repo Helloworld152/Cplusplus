@@ -25,3 +25,5 @@ int main(){
     cout << "a = " << a << endl;
     cout << "x = " << x << endl;
 }
+
+
