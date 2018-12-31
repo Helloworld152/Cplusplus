@@ -89,28 +89,84 @@ using namespace std;
 //}
 
 
-#include <iostream>
-using namespace std;
+//#include <iostream>
+//using namespace std;
+//
+//class Rational{
+//    friend istream&operator>>(istream &istream1, Rational & obj);
+//    friend ostream&operator<<(ostream &ostream1, const Rational & obj);
+//    friend Rational operator+(const Rational&rational, const Rational&rational1);
+//    friend Rational operator*(const Rational&rational, const Rational&rational1);
+//    friend bool operator>(const Rational&rational, const Rational&rational1);
+//    friend bool operator<(const Rational&rational, const Rational&rational1);
+//    friend bool operator==(const Rational&rational, const Rational&rational1);
+//
+//private:
+//    int num;
+//    int den;
+//
+//    void ReductFraction();
+//
+//public:
+//    Rational(int n = 0, int d = 1):num(n), den(d){ReductFraction();}
+//    operator double () const { return (double)num / den; }
+//};
+//
+//Rational operator+(const Rational &rational, const Rational &rational1){
+//}
 
-class Rational{
-    friend istream&operator>>(istream &istream1, Rational & obj);
-    friend ostream&operator<<(ostream &ostream1, const Rational & obj);
-    friend Rational operator+(const Rational&rational, const Rational&rational1);
-    friend Rational operator*(const Rational&rational, const Rational&rational1);
-    friend bool operator>(const Rational&rational, const Rational&rational1);
-    friend bool operator<(const Rational&rational, const Rational&rational1);
-    friend bool operator==(const Rational&rational, const Rational&rational1);
 
-private:
-    int num;
-    int den;
+//template <class T>
+//class Array{
+//    int low;
+//    int high;
+//    T *storage;
+//
+//public:
+//    Array(int lh = 0, int rh = 0):low(lh), high(rh){
+//        storage = new T [high - low + 1];
+//    }
+//
+//    Array(const Array & array);
+//
+//    Array& operator=(const Array & array);
+//
+//    T&operator[](int index);
+//
+//    ~Array(){
+//        if (storage)
+//            delete[]storage;
+//    }
+//};
+//
+//template <class T>
+//Array<T>::Array(const Array<T> &array) {
+//
+//}
+//template <class T>
+//Array<T>& Array<T>::operator=(const Array &array) {}
 
-    void ReductFraction();
 
-public:
-    Rational(int n = 0, int d = 1):num(n), den(d){ReductFraction();}
-    operator double () const { return (double)num / den; }
-};
+//template <class T> class B;
+//template <class T> void f(const T &);
+//template <class type>
+//class A{
+//    friend class B <type>;
+//    friend void f(const type &);
+//};
 
-Rational operator+(const Rational &rational, const Rational &rational1){
+
+//template <class T> class Array;
+//template <class T> ostream& operator<<(ostream& ostream1, const Array<T>& array);
+//
+//template <class T>
+//class Array{
+//    friend ostream&operator<<(ostream& ostream1, const Array<T> &array);
+//};
+
+void f(int a, int b = 3, char c = '*'){
+    return;
+}
+int main(){
+    f(6,'#');
 }
