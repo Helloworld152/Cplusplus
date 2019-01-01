@@ -166,6 +166,7 @@ using namespace std;
 
 void f(int a, int b = 3, char c = '*'){
     return;
+    return;
 }
 int main(){
     f(6,'#');
