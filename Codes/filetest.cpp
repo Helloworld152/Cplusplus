@@ -164,9 +164,6 @@ using namespace std;
 //    friend ostream&operator<<(ostream& ostream1, const Array<T> &array);
 //};
 
-void f(int a, int b = 3, char c = '*'){
-    return;
-}
 int main(){
-    f(6,'#');
+    cout << "hello";
 }

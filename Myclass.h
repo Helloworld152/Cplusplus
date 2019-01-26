@@ -51,25 +51,37 @@ private:
     int length;
 public:
     LongLongInt(char *a);
+
     LongLongInt(int len):length(len){ integer = new int[length]; }
+
     LongLongInt(const LongLongInt &longLongInt):integer(longLongInt.integer), length(longLongInt.length){}
+
     void display();
+
     void showLength(){ cout << length << endl; }
+
     LongLongInt operator+(const LongLongInt &longLongInt);
+
     LongLongInt operator=(const LongLongInt &longLongInt);
+
     int & operator[](int index);
+
     LongLongInt operator()(int start, int end);
+
     friend ostream& operator<<(ostream &ostream1, const LongLongInt& longLongInt);
+
     friend istream& operator>>(istream &istream1, LongLongInt &longLongInt){ return istream1;};
 };
 
 //Date class
 class Date{
+
 public:
     Date();
     Date(int y, int m, int d);
     Date(const Date &d):year(d.year),month(d.month),day(d.day){}
     void showDate(){ cout << "Date: " << year << "-" << month << "-" << day << endl; }
+
 private:
     int year;
     int month;
