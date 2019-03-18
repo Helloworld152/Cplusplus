@@ -114,9 +114,13 @@ private:
     int number;
 public:
     Commodity(){};
+
     Commodity(string Name, double cost, double sell, int num):name(Name),costPrice(cost*num),sellPrice(sell*num),number(num){}
-    friend ostream&operator<<(ostream &ostream1, const Commodity& commodity);
+
+    friend ostream & operator<<(ostream &ostream1, const Commodity& commodity);
+
     Commodity operator+(const Commodity& commodity);
+
     friend void avg(const Commodity & g1);
 };
 

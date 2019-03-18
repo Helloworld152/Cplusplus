@@ -825,11 +825,11 @@ using namespace std;
 //using namespace std;
 //const int N = 20;
 //
-//template <class Type>
-//Type stringToNum(const string& str)
+//template <class elemType>
+//elemType stringToNum(const string& str)
 //{
 //    istringstream iss(str);
-//    Type num;
+//    elemType num;
 //    iss >> num;
 //    return num;
 //}
