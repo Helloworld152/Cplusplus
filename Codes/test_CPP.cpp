@@ -49,5 +49,15 @@ public:
 };
 
 int main(){
-    cout << "ÄãºÃ" <<endl;
+    int x = 40;
+    const int * p = &x;
+
+    cout << *p << endl;
+    int y = 30;
+
+    p = &y;
+    x = 80;
+    cout << *p << endl;
+
+    cout << x << endl;
 }
