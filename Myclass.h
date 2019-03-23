@@ -62,7 +62,7 @@ public:
 
     LongLongInt operator+(const LongLongInt &longLongInt);
 
-    LongLongInt operator=(const LongLongInt &longLongInt);
+    LongLongInt& operator=(const LongLongInt &longLongInt);
 
     int & operator[](int index);
 

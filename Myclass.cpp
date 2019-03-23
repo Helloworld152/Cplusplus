@@ -112,7 +112,8 @@ LongLongInt LongLongInt::operator+(const LongLongInt &longLongInt) {
     return longLongInt1;
 }
 
-LongLongInt LongLongInt::operator=(const LongLongInt &longLongInt) {
+LongLongInt & LongLongInt::operator=(const LongLongInt &longLongInt) {
+
     if (this == &longLongInt) return *this;
     delete [] integer;
     length = longLongInt.length;
