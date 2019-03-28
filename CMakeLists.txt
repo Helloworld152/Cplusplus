@@ -14,3 +14,5 @@ add_executable(homework2_3 Codes/homework2_3.cpp)
 add_executable(homework2_4 Codes/homework2_4.cpp)
 add_executable(MyStack Codes/MyStack.cpp Myclass.h)
 add_executable(Myclass  Myclass.cpp Myclass.h)
+
+add_executable(classTest Codes/classTest.cpp Codes/balance.cpp)
