@@ -16,3 +16,8 @@ add_executable(MyStack Codes/MyStack.cpp Myclass.h)
 add_executable(Myclass  Myclass.cpp Myclass.h)
 
 add_executable(classTest Codes/classTest.cpp Codes/balance.cpp)
+add_executable(homework3_3 Codes/homework3_3.cpp)
+add_executable(Myqueue Codes/Myqueue.cpp)
+add_executable(test test.cpp)
+add_executable(simulator Codes/simulator.cpp)
+add_executable(homework3_5 Codes/homework3_5.cpp)
