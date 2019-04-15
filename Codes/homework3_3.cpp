@@ -128,6 +128,6 @@ int Ackerman1(int m, int n){
 }
 
 int main(){
-    cout << Ackerman(3,4) << endl;
-    cout << Ackerman1(3,4) << endl;
+    cout << Ackerman(2,4) << endl;
+    cout << Ackerman1(2,4) << endl;
 }
