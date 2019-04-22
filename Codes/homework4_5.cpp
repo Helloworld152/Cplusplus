@@ -148,7 +148,7 @@ public:
 
 	/* 交换二叉树中所有结点的左右子树 */
 	void exchangeLR();
-	void exchangeLR(Node *& t);
+	void exchangeLR(Node * t);
 
 
 private:
@@ -344,14 +344,14 @@ binaryTree<T>::~binaryTree() {
 
 /* 交换二叉树中所有结点的左右子树 */
 template <typename T>
-void binaryTree<T>::exchangeLR(binaryTree<T>::Node *&t) {
+void binaryTree<T>::exchangeLR(binaryTree<T>::Node *t) {
 
-	if (t->left == NULL && t->right == NULL) return;
+	if (t == NULL) return;
+	exchangeLR(t->left);
+	exchangeLR(t->right);
 	Node * tmp = t->left;
 	t->left = t->right;
 	t->right = tmp;
-	exchangeLR(t->left);
-	exchangeLR(t->right);
 }
 
 template <typename T>
@@ -366,3 +366,4 @@ int main(){
 	tree.exchangeLR();
 	tree.levelOrder();
 }
+
