@@ -311,7 +311,7 @@ void binaryTree<T>::createTree(T flag) {
 
 	while (!que.isEmpty()){
 		tmp = que.deQueue();
-		cout << "\nInput the two sons of " << tmp->data << << ", " << flag << " express NULL: ";
+		cout << "\nInput the two sons of " << tmp->data << ", " << flag << " express NULL: ";
 		cin >> ldata >> rdata;
 		if (ldata != flag) que.enQueue(tmp->left = new Node(ldata));
 		if (rdata != flag) que.enQueue(tmp->right = new Node(rdata));

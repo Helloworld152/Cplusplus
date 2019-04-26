@@ -15,7 +15,7 @@ add_executable(homework2_4 Codes/homework2_4.cpp)
 add_executable(MyStack Codes/MyStack.cpp Myclass.h)
 add_executable(Myclass  Myclass.cpp Myclass.h)
 
-add_executable(classTest Codes/classTest.cpp)
+add_executable(classTest Codes/classTest.cpp Codes/MyPriorityQueue.h)
 add_executable(homework3_3 Codes/homework3_3.cpp)
 add_executable(Myqueue Codes/Myqueue.cpp)
 add_executable(test test.cpp)
@@ -24,3 +24,5 @@ add_executable(homework3_5 Codes/homework3_5.cpp)
 
 add_executable(homework4_5 Codes/homework4_5.cpp)
 add_executable(homework4_6 Codes/homework4_6.cpp)
+
+add_executable(homework5_4 Codes/homework5_4.cpp)
